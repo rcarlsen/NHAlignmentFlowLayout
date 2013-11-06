@@ -144,7 +144,7 @@
 		return attributes;
 	}
 	
-	if (indexPath.item == [self.collectionView numberOfItemsInSection:indexPath.section]) {
+	if (indexPath.item == [self.collectionView numberOfItemsInSection:indexPath.section] - 1) {
 		frame.origin.y = self.collectionViewContentSize.height - self.sectionInset.bottom - frame.size.height;
 	} else {
 		NSIndexPath *nextIndexPath = [NSIndexPath indexPathForItem:indexPath.item + 1 inSection:indexPath.section];
